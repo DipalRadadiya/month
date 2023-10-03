@@ -1,0 +1,28 @@
+# Get the month as a number from the user
+try:
+    month_number = int(input("Enter the month as a number (1-12): "))
+
+    # Check if the entered number corresponds to a valid month
+    if 1 <= month_number <= 12:
+        # List of month names
+        month_names = [
+            "January", "February", "March", "April",
+            "May", "June", "July", "August",
+            "September", "October", "November", "December"
+        ]
+
+        # Get the month name using the entered number
+        month_name = month_names[month_number - 1]
+        print(f"The corresponding month is: {month_name}")
+    else:
+        print("Error: Please enter a number between 1 and 12.")
+except ValueError:
+    print("Error: Invalid input. Please enter a valid number.")
+
+
+Enter the month as a number (1-12): 4
+The corresponding month is: April.
+Enter the month as a number (1-12): 13
+Error: Please enter a number between 1 and 12.  
+nter the month as a number (1-12): July
+Error: Invalid input. Please enter a valid number.
